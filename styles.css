@@ -1,15 +1,15 @@
 :root {
-  --color-primary: #176b4d;
-  --color-primary-dark: #0f4f39;
-  --color-primary-soft: #e8f5ef;
+  --color-primary: #97c5fd;
+  --color-primary-dark: #5e5e65;
+  --color-primary-soft: #deb4e6;
   --color-accent: #f2b84b;
   --color-text: #17211b;
   --color-muted: #52615a;
   --color-surface: #ffffff;
-  --color-background: #f5f8f6;
+  --color-background: #79b7fe;
   --color-border: #cbd8d1;
   --color-danger: #a52a2a;
-  --shadow-card: 0 0.5rem 1.5rem rgb(23 33 27 / 10%);
+  --shadow-card: 0 0.5rem 1.5rem rgba(249, 117, 231, 0.1);
   --radius-small: 0.5rem;
   --radius-medium: 0.9rem;
   --radius-large: 1.4rem;
