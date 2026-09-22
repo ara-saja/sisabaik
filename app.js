@@ -1,10 +1,12 @@
 "use strict";
 
-const rupiah = new Inti.NumberFormat("id-ID", {style: "currency", currency: "IDR", maximumFractionDigits: 0});
+const rupiah = new Intl.NumberFormat("id-ID", {style: "currency", currency: "IDR", maximumFractionDigits: 0});
 document.addEventListener("DOMContentLoaded", () => {siapkanKatalog(); siapkanValidasiPenawaran(); });
 async function siapkanKatalog() {
-    const wadah = document.querySelector("#daftar-penawaran"); if (!wadah) return;
+    const wadah = document.querySelector("#daftar-penawaran"); 
+    if (!wadah) return;
     const status = document.querySelector("#status-katalog");
+    const inputCari = document.querySelector("#kata-kunci");
     const pilihKategori = document.querySelector("#filter-kategori");
     const keranjang = [];
 
@@ -16,10 +18,10 @@ async function siapkanKatalog() {
             const kata = inputCari.value.trim().toLowerCase();
             const kategori = pilihKategori.value;
             const hasil = penawaran.filter((item) => {
-                const cocokKata = '${item.nama} ${item.penyedia}' .toLocaleLowerCase().includes(kata);
-                const cocokKategori = kategori === "semua" || item.kategori === kategori; return cocoKata && cocokKategori;
+                const cocokKata = '${item.nama} ${item.penyedia}' .toLowerCase().includes(kata);
+                const cocokKategori = kategori === "semua" || item.kategori === kategori; return cocokKata && cocokKategori;
             });
-            renderKartu(hasil,wadah,status,kerangjang);
+            renderKartu(hasil,wadah,status,keranjang);
         }
         inputCari.addEventListener("input",perbaruiTampilan);
         pilihKategori.addEventListener("change",perbaruiTampilan);
